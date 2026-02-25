@@ -15,9 +15,7 @@ Route::get('/user/surname/name',function(){
     return '2';
 });
 
-Route::get('')
+Route::get('/user/test/{name}',function($name){
+    return $name;
+})
 ?>
-
-///
-///?
-sdsds
