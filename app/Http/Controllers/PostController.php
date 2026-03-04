@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-class PostController extends Controller
-{
-    public function show($id){
-        $posts=[
-            1=>'текст 1',
-            2=>'текст 2',
-            3=>'текст 3',
-            4=>'текст 4',
-            5=>'текст 5',
-        ];
-        return $posts[$id];
+<?php
+class PostController extends Controller{
+    public function show(){
+        $name='иван';
+        $surname='иванов';
+        $title='my view';
+        return view('post.show',[
+            'name'=>$name,
+            'surname'=>$surname,
+            'title'=>$title
+        ]);
     }
 }
 ?>

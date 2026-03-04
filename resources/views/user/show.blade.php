@@ -3,7 +3,6 @@
 		{{$title}}
 	</x-slot>
 	
-	{{$name}}
-    {{$surname}}
+	{{$name1}}
+    {{$surname1}}
 </x-layout>
-
