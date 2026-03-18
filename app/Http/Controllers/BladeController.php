@@ -8,14 +8,17 @@ class BladeController extends Controller
 {
     public function show()
     {
-        $name='ника';
+        $name='Ника';
         $age=19;
         $salary=2000;
+
+        $classCSS='red';
 
         return view('test',[
             'name'=>$name,
             'age'=>$age,
-            'salary'=>$salary
+            'salary'=>$salary,
+            'classCSS'=>$classCSS
         ]);
     }
 }

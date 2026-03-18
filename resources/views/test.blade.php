@@ -9,5 +9,11 @@
     <p>Имя: {{$name}}</p>
     <p>Возраст: {{$age}}</p>
     <p>Зарплата: {{$salary}}</p>
+
+    <style>
+        .red{color:red}
+    </style>
+
+    <p class='{{$classCSS}}'>красный текст</p>
 </body>
 </html>
