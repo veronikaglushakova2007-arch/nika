@@ -23,5 +23,7 @@
     <p style='{{$greenText}}'>зеленый текст</p>
 
     <a href="{{$href}}">{{$text}}</a>
+
+    <p>Сегодня: {{date('d.m.Y')}}</p>
 </body>
 </html>
