@@ -11,14 +11,19 @@ class BladeController extends Controller
         $name='Ника';
         $age=19;
         $salary=2000;
-
         $classCSS='red';
+        $var1='значение 1';
+        $var2='значение 2';
+        $var3='значение 3';
 
         return view('test',[
             'name'=>$name,
             'age'=>$age,
             'salary'=>$salary,
-            'classCSS'=>$classCSS
+            'classCSS'=>$classCSS,
+            'var1'=>$var1,
+            'var2'=>$var2,
+            'var3'=>$var3
         ]);
     }
 }
