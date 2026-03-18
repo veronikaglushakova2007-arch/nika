@@ -23,6 +23,11 @@ class BladeController extends Controller
             'age'=>23,
             'salary'=>7000
         ];
+        $arr1=[
+            'один',
+            'два',
+            'три'
+        ];
 
         return view('test',[
             'name'=>$name,
@@ -35,7 +40,8 @@ class BladeController extends Controller
             'greenText'=>$greenText,
             'text'=>$text,
             'href'=>$href,
-            'arr'=>$arr
+            'arr'=>$arr,
+            'arr1'=>$arr1
         ]);
     }
 }
