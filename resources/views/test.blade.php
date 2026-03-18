@@ -15,5 +15,9 @@
     </style>
 
     <p class='{{$classCSS}}'>красный текст</p>
+
+    <input value="{{$var1}}">
+    <input value="{{$var2}}">
+    <input value="{{$var3}}">
 </body>
 </html>
