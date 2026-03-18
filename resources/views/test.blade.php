@@ -21,5 +21,7 @@
     <input value="{{$var3}}">
 
     <p style='{{$greenText}}'>зеленый текст</p>
+
+    <a href="{{$href}}">{{$text}}</a>
 </body>
 </html>

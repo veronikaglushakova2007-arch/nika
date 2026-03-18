@@ -16,6 +16,8 @@ class BladeController extends Controller
         $var2='значение 2';
         $var3='значение 3';
         $greenText='color:green';
+        $text='ссылка на вк';
+        $href='https://vk.com/';
 
         return view('test',[
             'name'=>$name,
@@ -25,7 +27,9 @@ class BladeController extends Controller
             'var1'=>$var1,
             'var2'=>$var2,
             'var3'=>$var3,
-            'greenText'=>$greenText
+            'greenText'=>$greenText,
+            'text'=>$text,
+            'href'=>$href
         ]);
     }
 }
