@@ -3,16 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>my view</title>
+    <title>Document</title>
 </head>
 <body>
-    <x-layout>
-        <x-slot:title>
-            {{$title}}-site.com
-        </x-slot>
-
-        {{$text}}
-    <x-layout>
+    <p>Имя: {{$name}}</p>
+    <p>Возраст: {{$age}}</p>
+    <p>Зарплата: {{$salary}}</p>
 </body>
 </html>
-
