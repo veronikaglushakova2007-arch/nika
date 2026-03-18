@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController1;
+use App\Http\Controllers\BladeController;
 
-	Route::get('/post', [PostController1::class, 'show']);
+	Route::get('/post', [BladeController::class, 'show']);
 ?>
