@@ -25,5 +25,9 @@
     <a href="{{$href}}">{{$text}}</a>
 
     <p>Сегодня: {{date('d.m.Y')}}</p>
+
+    <p>Имя: {{$arr['name']}}</p>
+    <p>Возраст: {{$arr['age']}}</p>
+    <p>Зарплата: {{$arr['salary']}}</p>
 </body>
 </html>
