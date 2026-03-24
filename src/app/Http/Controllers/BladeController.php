@@ -34,7 +34,7 @@ class BladeController extends Controller
         ];
         $year = 2026;
         $str = '<b>жирный текст</b>';
-        $userAge = 19;
+        $userAge = 17;
 
         return view('test', [
             'name' => $name,
