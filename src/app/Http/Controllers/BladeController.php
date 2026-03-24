@@ -33,6 +33,7 @@ class BladeController extends Controller
             'country' => 'США'
         ];
         $year = 2026;
+        $str = '<b>жирный текст</b>';
 
         return view('test', [
             'name' => $name,
@@ -49,7 +50,8 @@ class BladeController extends Controller
             'arr1' => $arr1,
             'city' => $city,
             'location' => $location,
-            'year' => $year
+            'year' => $year,
+            'str' => $str
         ]);
     }
 }
