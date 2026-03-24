@@ -32,6 +32,7 @@ class BladeController extends Controller
         $location = [
             'country' => 'США'
         ];
+        $year = 2026;
 
         return view('test', [
             'name' => $name,
@@ -47,7 +48,8 @@ class BladeController extends Controller
             'arr' => $arr,
             'arr1' => $arr1,
             'city' => $city,
-            'location' => $location
+            'location' => $location,
+            'year' => $year
         ]);
     }
 }
