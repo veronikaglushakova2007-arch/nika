@@ -41,7 +41,9 @@ class BladeController extends Controller
             'text'=>$text,
             'href'=>$href,
             'arr'=>$arr,
-            'arr1'=>$arr1
+            'arr1'=>$arr1,
+            'city' => 'Омск'
         ]);
+        
     }
 }

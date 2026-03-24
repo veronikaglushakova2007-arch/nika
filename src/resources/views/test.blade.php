@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Имя: {{$name}}</p>
+    <p>Возраст: {{$age}}</p>
+    <p>Зарплата: {{$salary}}</p>
+
+    <style>
+        .red{color:red}
+    </style>
+
+    <p class='{{$classCSS}}'>красный текст</p>
+
+    <input value="{{$var1}}">
+    <input value="{{$var2}}">
+    <input value="{{$var3}}">
+
+    <p style='{{$greenText}}'>зеленый текст</p>
+
+    <a href="{{$href}}">{{$text}}</a>
+
+    <p>Сегодня: {{date('d.m.Y')}}</p>
+
+    <p>Имя: {{$arr['name']}}</p>
+    <p>Возраст: {{$arr['age']}}</p>
+    <p>Зарплата: {{$arr['salary']}}</p>
+
+    <p>В массиве {{count($arr1)}} элемента(ов)</p>
+
+    <p>Город: {{ $city ?? 'Москва' }}</p>
+</body>
+</html>
