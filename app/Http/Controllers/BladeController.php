@@ -28,6 +28,9 @@ class BladeController extends Controller
             'два',
             'три'
         ];
+        $location = [
+            'country' => 'США',
+        ];
 
         return view('test',[
             'name'=>$name,
@@ -42,7 +45,8 @@ class BladeController extends Controller
             'href'=>$href,
             'arr'=>$arr,
             'arr1'=>$arr1,
-            'city' => 'Омск'
+            'city' => 'Омск',
+            'location' => $location,
         ]);
         
     }
