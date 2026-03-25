@@ -38,6 +38,9 @@ class BladeController extends Controller
         $numbers = [
             1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         ];
+        $items = [
+            'один', 'два', 'три', 'четыре', 'пять'
+        ];
 
         return view('test', [
             'name' => $name,
@@ -57,7 +60,8 @@ class BladeController extends Controller
             'year' => $year,
             'str' => $str,
             'userAge' => $userAge,
-            'numbers'=>$numbers
+            'numbers'=>$numbers,
+            'items' => $items,
         ]);
     }
 }

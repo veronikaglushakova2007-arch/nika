@@ -77,6 +77,11 @@
         @endforeach
     </ul>
     
+    <ul>
+        @foreach($items as $key=>$value)
+            <li>{{$key}} => {{$value}}</li>
+        @endforeach
+    </ul>
 
 </body>
 </html>
