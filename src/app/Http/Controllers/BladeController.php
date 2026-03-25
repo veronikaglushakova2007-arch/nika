@@ -44,6 +44,11 @@ class BladeController extends Controller
         $data = [
             1, 2, 3
         ];
+        $matrix = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
 
         return view('test', [
             'name' => $name,
@@ -66,6 +71,7 @@ class BladeController extends Controller
             'numbers'=>$numbers,
             'items' => $items,
             'data' => $data,
+            'matrix' => $matrix,
         ]);
     }
 }
