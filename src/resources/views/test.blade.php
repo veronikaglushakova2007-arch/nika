@@ -70,6 +70,12 @@
             <li>{{$num}} в квадрате = {{$num*$num}}</li>
         @endforeach
     </ul>
+
+    <ul>
+        @foreach($numbers as $num)
+            <li>квадратный корень {{$num}} = {{sqrt($num)}}</li>
+        @endforeach
+    </ul>
     
 
 </body>
