@@ -54,6 +54,9 @@
     @else
         <p>младше 18</p>
     @endif
-    
+
+    @unless($userAge>=18)
+        <p>несовершеннолетний</p>
+    @endunless    
 </body>
 </html>
