@@ -180,7 +180,12 @@
         @break($num == 0)
     @endforeach
 
-    
+    <ul>
+        @foreach ($numbersZero as $num)
+            @continue($num == 0)
+            <li>{{ $num }}</li>
+        @endforeach
+    </ul>
 
 </body>
 </html>
