@@ -35,6 +35,9 @@ class BladeController extends Controller
         $year = 2026;
         $str = '<b>жирный текст</b>';
         $userAge = 17;
+        $numbers = [
+            1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+        ];
 
         return view('test', [
             'name' => $name,
@@ -53,7 +56,8 @@ class BladeController extends Controller
             'location' => $location,
             'year' => $year,
             'str' => $str,
-            'userAge' => $userAge
+            'userAge' => $userAge,
+            'numbers'=>$numbers
         ]);
     }
 }

@@ -58,5 +58,12 @@
     @unless($userAge>=18)
         <p>несовершеннолетний</p>
     @endunless    
+
+    @if(count($numbers)>0)
+        <p>сумма элементов: {{array_sum($numbers)}}</p>
+    @else
+        <p>массив пуст</p>
+    @endif
+
 </body>
 </html>
