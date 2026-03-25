@@ -145,6 +145,11 @@
             <li>{{ $loop->index }}: {{ $elem }}</li>
         @endforeach
     </ul>
+    <ul>
+        @foreach ($items as $elem)
+            <li>{{ $loop->iteration }}: {{ $elem }}</li>
+        @endforeach
+    </ul>
 
 </body>
 </html>
