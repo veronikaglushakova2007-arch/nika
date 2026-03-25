@@ -117,5 +117,20 @@
         @endforeach
     </ul>
 
+    <table border="1">
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Зарплата</th>
+        </tr>
+        @foreach ($employees as $worker)
+            <tr>
+                <td>{{ $worker['name'] }}</td>
+                <td>{{ $worker['surname'] }}</td>
+                <td>{{ $worker['salary'] }}</td>
+            </tr>
+        @endforeach
+    </table>
+
 </body>
 </html>
