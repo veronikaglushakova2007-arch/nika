@@ -69,6 +69,7 @@ class BladeController extends Controller
         $names = [
             'Анна', 'Мария', 'Елена'
         ];
+        $numbersZero = [1, 2, 3, 0, 4, 5, 6, 0, 7, 0];
 
         return view('test', [
             'name' => $name,
@@ -94,6 +95,7 @@ class BladeController extends Controller
             'matrix' => $matrix,
             'employees' => $employees,
             'names' => $names,
+            'numbersZero'=>$numbersZero,
         ]);
     }
 }

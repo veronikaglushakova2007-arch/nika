@@ -174,5 +174,13 @@
         @endif
     @endforeach
 
+    <br>
+    @foreach ($numbersZero as $num)
+        {{ $num }}
+        @break($num == 0)
+    @endforeach
+
+    
+
 </body>
 </html>
