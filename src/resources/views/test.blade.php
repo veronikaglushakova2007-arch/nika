@@ -166,5 +166,13 @@
         @endforeach
     </ul>
 
+    @foreach ($numbers as $num)
+        @if ($loop->remaining < 3)
+            <i>{{ $num }}</i>
+        @else
+            <b>{{ $num }}</b>
+        @endif
+    @endforeach
+
 </body>
 </html>
