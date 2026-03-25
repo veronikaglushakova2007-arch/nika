@@ -79,7 +79,7 @@
     
     <ul>
         @foreach($items as $key=>$value)
-            <li>{{$key}} => {{$value}}</li>
+            <li>{{$key+1}} => {{$value}}</li>
         @endforeach
     </ul>
 
