@@ -83,5 +83,13 @@
         @endforeach
     </ul>
 
+    <ul>
+        @foreach($numbers as $num)
+            @if($num%2==0)
+                <li>{{$num}} - четное</li>
+            @endif
+        @endforeach
+    </ul>
+
 </body>
 </html>
