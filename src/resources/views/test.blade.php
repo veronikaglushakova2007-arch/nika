@@ -111,5 +111,11 @@
         @endforeach
     </table>
 
+    <ul>
+        @foreach ($employees as $worker)
+            <li>{{ $worker['name'] }} {{ $worker['surname'] }} - {{ $worker['salary'] }}</li>
+        @endforeach
+    </ul>
+
 </body>
 </html>

@@ -49,6 +49,23 @@ class BladeController extends Controller
             [4, 5, 6],
             [7, 8, 9]
         ];
+        $employees = [
+            [
+                'name' => 'Иван',
+                'surname' => 'Иванов',
+                'salary' => 1000,
+            ],
+            [
+                'name' => 'Петр',
+                'surname' => 'Петров',
+                'salary' => 2000,
+            ],
+            [
+                'name' => 'Сидор',
+                'surname' => 'Сидоров',
+                'salary' => 3000,
+            ],
+        ];
 
         return view('test', [
             'name' => $name,
@@ -72,6 +89,7 @@ class BladeController extends Controller
             'items' => $items,
             'data' => $data,
             'matrix' => $matrix,
+            'employees' => $employees,
         ]);
     }
 }
