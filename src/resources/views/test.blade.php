@@ -65,5 +65,12 @@
         <p>массив пуст</p>
     @endif
 
+    <ul>
+        @foreach($numbers as $num)
+            <li>{{$num}}</li>
+        @endforeach
+    </ul>
+    
+
 </body>
 </html>
