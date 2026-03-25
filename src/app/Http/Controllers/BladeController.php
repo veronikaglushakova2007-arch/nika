@@ -66,6 +66,9 @@ class BladeController extends Controller
                 'salary' => 3000,
             ],
         ];
+        $names = [
+            'Анна', 'Мария', 'Елена'
+        ];
 
         return view('test', [
             'name' => $name,
@@ -90,6 +93,7 @@ class BladeController extends Controller
             'data' => $data,
             'matrix' => $matrix,
             'employees' => $employees,
+            'names' => $names,
         ]);
     }
 }

@@ -132,5 +132,13 @@
         @endforeach
     </table>
 
+    @if (count($names) > 0)
+        @foreach ($names as $name)
+            <p>{{ $name }}</p>
+        @endforeach
+    @else
+        <p>Нет элементов</p>
+    @endif
+
 </body>
 </html>
