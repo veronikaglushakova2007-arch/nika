@@ -140,5 +140,11 @@
         <p>Нет элементов</p>
     @endif
 
+    <ul>
+        @foreach ($items as $elem)
+            <li>{{ $loop->index }}: {{ $elem }}</li>
+        @endforeach
+    </ul>
+
 </body>
 </html>
