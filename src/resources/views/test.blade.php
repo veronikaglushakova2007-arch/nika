@@ -67,7 +67,7 @@
 
     <ul>
         @foreach($numbers as $num)
-            <li>{{$num}}</li>
+            <li>{{$num}} в квадрате = {{$num*$num}}</li>
         @endforeach
     </ul>
     
