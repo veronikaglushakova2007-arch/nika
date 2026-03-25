@@ -151,5 +151,20 @@
         @endforeach
     </ul>
 
+    <style>
+        .first { color: pink; }
+        .last { color: blue;}
+    </style>
+    <ul>
+        @foreach ($items as $elem)
+            <li 
+                @if($loop->first) class="first" @endif
+                @if($loop->last) class="last" @endif
+            >
+                {{ $elem }}
+            </li>
+        @endforeach
+    </ul>
+
 </body>
 </html>
