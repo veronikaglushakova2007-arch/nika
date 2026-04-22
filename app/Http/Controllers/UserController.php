@@ -180,4 +180,56 @@ class UserController extends Controller
     {
         return DB::table('users')->whereIdOrAge(3, 20)->get();
     }
+
+    public function task33()
+    {
+        return DB::table('users')->orderBy('age', 'asc')->get();
+    }
+
+    public function task34()
+    {
+        return DB::table('users')->orderBy('salary', 'desc')->get();
+    }
+
+    public function task35()
+    {
+        return DB::table('users')->orderBy('created_at', 'asc')->get();
+    }
+
+    public function task36()
+    {
+        return DB::table('users')->orderBy('created_at', 'desc')->get();
+    }
+
+    public function task37()
+    {
+        return DB::table('users')->where('age', '>', 30)->orderBy('created_at', 'asc')->get();
+    }
+
+    public function task38()
+    {
+        return DB::table('users')->orderBy('updated_at', 'desc')->get();
+    }
+
+    public function task39()
+    {
+        return DB::table('users')->where('age', '>', 30)->orderBy('updated_at', 'asc')->get();
+    }
+
+    public function task40()
+    {
+        return DB::table('users')->inRandomOrder()->get();
+    }
+
+    public function task41()
+    {
+        return DB::table('users')->inRandomOrder()->first();
+    }
+
+    public function task42()
+    {
+        $all = DB::table('users')->whereBetween('age', [20, 30])->inRandomOrder()->get();
+        $one = DB::table('users')->whereBetween('age', [20, 30])->inRandomOrder()->first();
+        return ['all' => $all, 'one' => $one];
+    }
 }
