@@ -107,4 +107,32 @@ class UserController extends Controller
     {
         return DB::table('users')->where('id', 3)->first();
     }
+
+    public function task19()
+    {
+        $user = DB::table('users')->where('id', 3)->first();
+        return view('user', ['user' => $user]);
+    }
+
+    public function task20()
+    {
+        return DB::table('users')->where('id', 3)->value('email');
+    }
+
+    public function task21()
+    {
+        $email = DB::table('users')->where('id', 3)->value('email');
+        return view('email', ['email' => $email]);
+    }
+
+    public function task22()
+    {
+        return DB::table('users')->pluck('name');
+    }
+
+    public function task23()
+    {
+        $names = DB::table('users')->pluck('name');
+        return view('names', ['names' => $names]);
+    }
 }
