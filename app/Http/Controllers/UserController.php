@@ -232,4 +232,24 @@ class UserController extends Controller
         $one = DB::table('users')->whereBetween('age', [20, 30])->inRandomOrder()->first();
         return ['all' => $all, 'one' => $one];
     }
+
+    public function task43()
+    {
+        return DB::table('users')->take(3)->get();
+    }
+
+    public function task44()
+    {
+        return DB::table('users')->where('age', 30)->take(3)->get();
+    }
+
+    public function task45()
+    {
+        return DB::table('users')->skip(4)->take(10)->get();
+    }
+
+    public function task46()
+    {
+        return DB::table('users')->where('age', 30)->skip(2)->take(10)->get();
+    }
 }
