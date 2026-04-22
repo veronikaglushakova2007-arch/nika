@@ -47,4 +47,41 @@ class UserController extends Controller
     {
         return DB::table('users')->select('name', 'email as user_email')->get();
     }
+
+    public function task8()  
+    {
+        return DB::table('users')->where('age', 30)->get(); 
+    }
+
+
+    public function task9()  
+    { 
+        return DB::table('users')->where('age', '!=', 30)->get(); 
+    }
+
+
+    public function task10() 
+    { 
+        return DB::table('users')->where('age', '>', 30)->get(); 
+    }
+
+
+    public function task11() 
+    { 
+        return DB::table('users')->where('age', '<', 30)->get(); 
+    }
+
+
+    public function task12() 
+    { 
+        return DB::table('users')->where('age', '<=', 30)->get(); 
+    }
+
+
+    public function task13() 
+    { 
+        return DB::table('users')->whereBetween('age', [20, 30])->get(); 
+    }
+
+
 }
