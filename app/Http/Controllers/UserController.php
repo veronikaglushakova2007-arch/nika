@@ -37,4 +37,14 @@ class UserController extends Controller
         DB::table('posts')->where('id', '!=', 3)->get();
         return DB::getQueryLog();
     }
+
+    public function task6()
+    {
+        return DB::table('users')->select('name', 'email')->get();
+    }
+
+    public function task7()
+    {
+        return DB::table('users')->select('name', 'email as user_email')->get();
+    }
 }
