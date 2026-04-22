@@ -320,4 +320,12 @@ class UserController extends Controller
     {
         return DB::table('users')->delete();
     }
+
+    public function task57()
+    {
+        return DB::table('users')
+            ->leftJoin('cities', 'users.city_id', '=', 'cities.id')
+            ->select('users.*', 'cities.name as city_name')
+            ->get();
+    }
 }
