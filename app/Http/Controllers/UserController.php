@@ -135,4 +135,49 @@ class UserController extends Controller
         $names = DB::table('users')->pluck('name');
         return view('names', ['names' => $names]);
     }
+
+    public function task24()
+    {
+        return DB::table('users')->whereBetween('age', [30, 40])->get();
+    }
+
+    public function task25()
+    {
+        return DB::table('users')->whereNotBetween('age', [30, 40])->get();
+    }
+
+    public function task26()
+    {
+        return DB::table('users')->whereIn('id', [1, 2, 3, 5])->get();
+    }
+
+    public function task27()
+    {
+        return DB::table('users')->whereNotIn('id', [1, 2, 3, 5])->get();
+    }
+
+    public function task28()
+    {
+        return DB::table('users')->whereId(3)->get();
+    }
+
+    public function task29()
+    {
+        return DB::table('users')->whereName('john')->get();
+    }
+
+    public function task30()
+    {
+        return DB::table('users')->whereEmail('john@mail.com')->get();
+    }
+
+    public function task31()
+    {
+        return DB::table('users')->whereIdAndAge(3, 20)->get();
+    }
+
+    public function task32()
+    {
+        return DB::table('users')->whereIdOrAge(3, 20)->get();
+    }
 }
