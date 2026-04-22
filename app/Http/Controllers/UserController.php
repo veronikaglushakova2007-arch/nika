@@ -83,5 +83,28 @@ class UserController extends Controller
         return DB::table('users')->whereBetween('age', [20, 30])->get(); 
     }
 
+    public function task14()
+    {
+        return DB::table('users')->where('age', 30)->orWhere('id', '>', 4)->get();
+    }
 
+    public function task15()
+    {
+        return DB::table('users')->where('age', 30)->orWhere('salary', 500)->orWhere('id', '>', 4)->get();
+    }
+
+    public function task16()
+    {
+        return DB::table('users')->where('salary', 500)->orWhereBetween('age', [20, 30])->get();
+    }
+
+    public function task17()
+    {
+        return DB::table('users')->whereBetween('age', [20, 30])->orWhereBetween('salary', [400, 800])->get();
+    }
+
+    public function task18()
+    {
+        return DB::table('users')->where('id', 3)->first();
+    }
 }
