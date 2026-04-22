@@ -252,4 +252,72 @@ class UserController extends Controller
     {
         return DB::table('users')->where('age', 30)->skip(2)->take(10)->get();
     }
+
+    public function task47()
+    {
+        return DB::table('users')->insert([
+            'name' => 'Новый пользователь',
+            'email' => 'new@mail.ru',
+            'age' => 25,
+            'salary' => 50000,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+    }
+
+    public function task48()
+    {
+        $id = DB::table('users')->insertGetId([
+            'name' => 'Пользователь с id',
+            'email' => 'iduser@mail.ru',
+            'age' => 30,
+            'salary' => 60000,
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        
+        echo "ID вставленного пользователя: " . $id;
+    }
+
+    public function task49()
+    {
+        return DB::table('users')->insert([
+            ['name' => 'User 1', 'email' => 'user1@mail.ru', 'age' => 20, 'salary' => 40000, 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'User 2', 'email' => 'user2@mail.ru', 'age' => 25, 'salary' => 45000, 'created_at' => now(), 'updated_at' => now()],
+            ['name' => 'User 3', 'email' => 'user3@mail.ru', 'age' => 30, 'salary' => 50000, 'created_at' => now(), 'updated_at' => now()]
+        ]);
+    }
+
+    public function task50()
+    {
+        return DB::table('users')->where('id', 5)->update([
+            'name' => 'Изменённый пользователь',
+            'salary' => 75000
+        ]);
+    }
+
+    public function task51()
+    {
+        return DB::table('users')->where('age', 30)->update(['salary' => 500]);
+    }
+
+    public function task52()
+    {
+        return DB::table('users')->where('id', 1)->increment('age');
+    }
+
+    public function task53()
+    {
+        return DB::table('users')->where('age', 30)->increment('salary', 100);
+    }
+
+    public function task54()
+    {
+        return DB::table('users')->where('id', 5)->delete();
+    }
+
+    public function task55()
+    {
+        return DB::table('users')->delete();
+    }
 }
