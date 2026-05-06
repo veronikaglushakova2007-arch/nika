@@ -2,17 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use Illuminate\Http\Request;
+
 class PostController extends Controller
 {
-    public function show($id){
-        $posts=[
-            1=>'текст 1',
-            2=>'текст 2',
-            3=>'текст 3',
-            4=>'текст 4',
-            5=>'текст 5',
-        ];
-        return $posts[$id];
+    public function getAll(Request $request, $order = 'date', $dir = 'desc')
+    {
+        $dir = in_array($dir, ['asc', 'desc']) ? $dir : 'desc';
+        
+        $posts = Post::orderBy($order, $dir)->get();
+        
+        return view('posts.all', ['posts' => $posts]);
+    }
+    
+    public function getOne($id)
+    {
+        $post = Post::findOrFail($id);
+        
+        return view('posts.one', ['post' => $post]);
     }
 }
-?>
