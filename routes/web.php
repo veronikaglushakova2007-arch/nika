@@ -11,4 +11,6 @@ use App\Http\Controllers\BladeController;
 
 	Route::get('/post/{id}', [PostController::class, 'getOne'])
 		->where('id', '[0-9]+');
+
+	Route::match(['get', 'post'], '/post/new', [PostController::class, 'newPost']);
 ?>
