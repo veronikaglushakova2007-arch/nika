@@ -13,4 +13,17 @@ use App\Http\Controllers\BladeController;
 		->where('id', '[0-9]+');
 
 	Route::match(['get', 'post'], '/post/new', [PostController::class, 'newPost']);
+
+	Route::get('/post/change-first', [PostController::class, 'changeFirst']);
+
+	Route::match(['get', 'post'], '/post/edit/{id}', [PostController::class, 'editPost'])
+    ->where('id', '[0-9]+');
+
+	Route::get('/post/del/{id}', [PostController::class, 'delPost'])
+    ->where('id', '[0-9]+');
+
+	Route::get('/post/deleted', [PostController::class, 'getDeletedPosts']);
+
+	Route::get('/post/restore/{id}', [PostController::class, 'restorePost'])
+    ->where('id', '[0-9]+');
 ?>
