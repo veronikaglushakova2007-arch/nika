@@ -76,4 +76,18 @@ class PostController extends Controller
         
         return redirect('/post/deleted')->with('success', "Статья $title восстановлена");
     }
+
+    public function getUserWithProfile()
+    {
+        $user = User::with('profile')->find(1);
+        dump($user->name);
+        dump($user->profile->name);
+        dump($user->profile->surname);
+    }
+
+    public function getAllUsersWithProfiles()
+    {
+        $users = User::with('profile')->get();
+        return view('users.profiles', ['users' => $users]);
+    }
 }

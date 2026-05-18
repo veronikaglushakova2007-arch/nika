@@ -26,4 +26,24 @@ use App\Http\Controllers\BladeController;
 
 	Route::get('/post/restore/{id}', [PostController::class, 'restorePost'])
     ->where('id', '[0-9]+');
+
+	Route::get('/user/profile', [PostController::class, 'getUserWithProfile']);
+
+	Route::get('/users/profiles', [PostController::class, 'getAllUsersWithProfiles']);
+
+	Route::get('/user/city', [PostController::class, 'getUserWithCity']);
+
+	Route::get('/users/cities', [PostController::class, 'getAllUsersWithCities']);
+
+	Route::get('/cities/countries', [PostController::class, 'getAllCitiesWithCountries']);
+
+	Route::get('/users/full', [PostController::class, 'getAllUsersWithCitiesAndCountries']);
+
+	Route::get('/countries/cities', [PostController::class, 'getAllCountriesWithCities']);
+
+	Route::get('/users/countries', [PostController::class, 'getAllUsersWithCountriesThrough']);
+
+	Route::get('/products/categories', [PostController::class, 'getProductsWithCategories']);
+
+	Route::get('/categories/products', [PostController::class, 'getCategoriesWithProducts']);
 ?>
